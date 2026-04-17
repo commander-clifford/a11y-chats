@@ -1,19 +1,31 @@
 {
   "manifest_version": 3,
-  "name": "a11y-chats",
-  "version": "0.2.0",
-  "description": "Audits images, alt text, and page metadata on the current page.",
-  "permissions": ["activeTab", "scripting"],
+  "name": "Image Alt Text Inspector",
+  "version": "0.1.9",
+  "description": "Scrapes all images from the current webpage along with the alt text and displays them on a new page.",
+  "permissions": ["activeTab", "storage", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
-  "action": {},
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "commands": {
-    "_execute_action": {
+    "activate_extension": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "mac": "Command+Shift+Y"
-      }
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "Activate Image Alt Text Inspector"
     }
   },
   "web_accessible_resources": [
